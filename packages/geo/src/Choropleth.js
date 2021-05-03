@@ -80,14 +80,14 @@ const Choropleth = memo(props => {
             (feature, event) =>
                 isInteractive &&
                 Tooltip &&
-                showTooltipFromEvent(<Tooltip feature={feature} />, event),
+                showTooltipFromEvent(<Tooltip feature={feature} />, event, 'left'),
             [isInteractive, showTooltipFromEvent, Tooltip]
         )
         const handleMouseMove = useCallback(
             (feature, event) =>
                 isInteractive &&
                 Tooltip &&
-                showTooltipFromEvent(<Tooltip feature={feature} />, event),
+                showTooltipFromEvent(<Tooltip feature={feature} />, event, 'left'),
             [isInteractive, showTooltipFromEvent, Tooltip]
         )
         const handleMouseLeave = useCallback(() => isInteractive && hideTooltip(), [
